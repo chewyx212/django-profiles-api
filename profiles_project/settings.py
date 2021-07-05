@@ -7,6 +7,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
+from pathlib import Path
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -17,7 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '5z-1r3m@p#!)^ge)0jb$x2b^j(+@p!1)r#(mysv*x5*-x55@zk'
+SECRET_KEY = 'django-insecure-a=kh1s6mcqk4wi61s^#e_5b6db5a6a&q()th3u4&zr3y708)#$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(int(os.environ.get('DEBUG', 1)))
@@ -124,6 +125,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-AUTH_USER_MODEL = 'profiles_api.Userprofile'
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'profiles_api.UserProfile'
 
 STATIC_ROOT = 'static/'
